@@ -4,7 +4,7 @@ const initialState = {
     quizzes: {}
 };
 
-const quizzesSlice = createSlice({
+export const quizzesSlice = createSlice({
     name: "quizzes",
     initialState,
     reducers: {
@@ -25,6 +25,6 @@ const quizzesSlice = createSlice({
     }
 });
 
-export const selectQuizzes = (state) => quizzesSlice.quizzes.quizzes;
+export const selectQuizzes = (state) => state.quizzes.quizzes;
 export const {addQuiz, addQuizIdToTopic} = quizzesSlice.actions;
 export default quizzesSlice.reducer;
