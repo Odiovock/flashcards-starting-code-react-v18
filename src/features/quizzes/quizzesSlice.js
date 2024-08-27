@@ -18,13 +18,9 @@ export const quizzesSlice = createSlice({
                 cardIds
             }
         },
-        addQuizIdToTopic: (state, action) => {
-            const {id, topicId} = action.payload;
-            state.topicId[topicId].quizIds.push(id);
-        }
     }
 });
 
 export const selectQuizzes = (state) => state.quizzes.quizzes;
-export const {addQuiz, addQuizIdToTopic} = quizzesSlice.actions;
+export const {addQuiz} = quizzesSlice.actions;
 export default quizzesSlice.reducer;
